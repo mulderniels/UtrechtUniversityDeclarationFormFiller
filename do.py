@@ -14,12 +14,11 @@ data = data.active #select the active sheet
 
 personsN = data.max_row-1 #no of scenarios
 
-templateFile = load_workbook(filename = 'template.xlsx')
-template = templateFile.active #select the active sheet
+templateFileMaster = load_workbook(filename = 'template.xlsx')
 
 #loop trough persons
 for iPerson in range(2, personsN+1+1):
-	templateFile = load_workbook(filename = 'template.xlsx')
+	templateFile = templateFileMaster
 	result = templateFile.active #select the active sheet
 	
 	achternaam = str(data.cell(row = iPerson, column = 3).value);
