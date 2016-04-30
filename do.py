@@ -27,10 +27,10 @@ for iPerson in range(2, personsN+1+1):
 	
 	result['A11'] = str(data.cell(row = iPerson, column = 2).value)[0] #voorletter
 	result['J11'] = achternaam #achternaam
-	result['A13'] = str(data.cell(row = iPerson, column = 5).value) #straat
-	result['J13'] = str(data.cell(row = iPerson, column = 6).value) #postcode
-	result['A15'] = str(data.cell(row = iPerson, column = 3).value) #iban
-	result['A17'] = str(data.cell(row = iPerson, column = 4).value) #swift
+	result['A13'] = str(data.cell(row = iPerson, column = 6).value) #straat
+	result['J13'] = str(data.cell(row = iPerson, column = 7).value) #postcode
+	result['A15'] = str(data.cell(row = iPerson, column = 4).value) #iban
+	result['A17'] = str(data.cell(row = iPerson, column = 5).value) #swift
 	if not os.path.exists('output/' + filename):
 	    os.makedirs('output/' + filename)
 	templateFile.save('output/' + filename + '/declaratie ' + filename + '.xlsx')
